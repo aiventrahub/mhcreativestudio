@@ -1,39 +1,55 @@
 /**
  * IMAGE MANIFEST
- * ─────────────────────────────────────────────────────────────────────────
- * Static websites opened directly as a file (file:///index.html) or hosted
- * on plain static hosting (GitHub Pages) CANNOT read a folder's contents —
- * there is no server to ask "what files are in /assets/logos/". Browsers
- * block that for security reasons, with or without a framework.
- *
- * So this manifest is the one file you edit when you add images.
- * You never touch index.html, CSS, or the gallery/hero logic — just list
- * the filename here and it is picked up automatically everywhere it's used
- * (hero image, portfolio grid, filters, lightbox).
- *
- * HOW TO ADD YOUR PROFILE PHOTO
- *  1. Put the image inside  /assets/profile/
- *  2. Add its filename to PROFILE_IMAGES below (first one is used).
- *
- * HOW TO ADD A PORTFOLIO PIECE
- *  1. Put the image inside the matching /assets/<category>/ folder.
- *  2. Add one object to PORTFOLIO_ITEMS with its filename + category.
- *
- * Nothing else in the codebase needs to change.
  */
 
 const PROFILE_IMAGES = [
-  // "your-photo.jpg"
+  "profile.webp" // assets/profile/profile.webp
 ];
 
 const PORTFOLIO_ITEMS = [
-  // Example — uncomment and edit once you add a real file:
-  // {
-  //   file: "clinic-banner-01.jpg",
-  //   category: "medical",
-  //   title: "সিটি হাসপাতাল — ওয়েব ব্যানার",
-  //   titleEn: "City Hospital — Web Banner",
-  // },
+
+  {
+    file: "social1.webp",
+    category: "social",
+    title: "MH Creative Studio Social Design",
+    titleEn: "MH Creative Studio Social Design"
+  },
+
+  {
+    file: "logo1.webp",
+    category: "logo",
+    title: "MH Creative Studio Logo",
+    titleEn: "MH Creative Studio Logo"
+  },
+
+  {
+    file: "branding1.webp",
+    category: "branding",
+    title: "Brand Identity",
+    titleEn: "Brand Identity"
+  },
+
+  {
+    file: "medical1.webp",
+    category: "medical",
+    title: "Medical Banner",
+    titleEn: "Medical Banner"
+  },
+
+  {
+    file: "banner1.webp",
+    category: "banner",
+    title: "Promotional Banner",
+    titleEn: "Promotional Banner"
+  },
+
+  {
+    file: "website1.webp",
+    category: "website",
+    title: "Website Design",
+    titleEn: "Website Design"
+  }
+
 ];
 
 const CATEGORY_FOLDERS = {
