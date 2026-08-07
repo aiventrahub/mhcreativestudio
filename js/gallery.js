@@ -1,4 +1,4 @@
-/**
+/*
  * GALLERY.JS
  * - Loads the hero image automatically from PROFILE_IMAGES (js/manifest.js).
  * - Builds the portfolio grid automatically from PORTFOLIO_ITEMS.
@@ -14,6 +14,10 @@
     initLightbox(items);
   });
 
+  function isAbsoluteUrl(u) {
+    return typeof u === 'string' && /^https?:\/\//i.test(u);
+  }
+
   /* ---------------- Hero image ---------------- */
   function loadHeroImage() {
     const img = document.getElementById("heroImage");
@@ -21,9 +25,14 @@
     const list = window.PROFILE_IMAGES || [];
     const folder = window.PROFILE_FOLDER || "assets/profile/";
 
+    if (!img) return; // no image element
+
     if (!list.length) return; // fallback monogram stays visible
 
-    const src = folder + list[0];
+    // Use absolute URL if provided, otherwise use folder + filename
+    const entry = list[0];
+    const src = isAbsoluteUrl(entry) ? entry : folder + entry;
+
     img.src = src;
     img.onload = function () {
       img.classList.add("loaded");
@@ -49,7 +58,7 @@
       grid.innerHTML =
         '<div class="portfolio-empty">' +
         "<h3>শীঘ্রই আসছে নতুন কাজ ✨</h3>" +
-        '<p style="color:var(--text-muted)">assets/&lt;category&gt;/ ফোল্ডারে ছবি যোগ করুন এবং js/manifest.js এ এন্ট্রি দিন — গ্যালারি নিজে থেকেই আপডেট হয়ে যাবে।</p>' +
+        '<p style="color:var(--text-muted)">assets/&lt;category&gt;/ ফোল্ডারে ছবি যোগ করুন এবং js/manifest.js এ এন্ট্রি দিন — গুলো এখানে প্রদর্শিত হবে।</p>' +
         "</div>";
       return [];
     }
@@ -58,7 +67,8 @@
 
     data.forEach(function (item, index) {
       const folder = folders[item.category] || "assets/portfolio/";
-      const src = folder + item.file;
+      // If item.file is an absolute URL use it directly, otherwise prefix with folder
+      const src = item && item.file ? (isAbsoluteUrl(item.file) ? item.file : folder + item.file) : "";
       const label = labels[item.category] || { bn: item.category, en: item.category };
 
       const card = document.createElement("div");
