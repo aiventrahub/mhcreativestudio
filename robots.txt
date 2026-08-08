@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rakibulhasan.design/sitemap.xml
+Sitemap: https://mhcreativestudio.pro.bd/sitemap.xml
