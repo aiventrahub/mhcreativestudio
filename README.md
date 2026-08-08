@@ -1,4 +1,4 @@
-# Rakibul Hasan — Premium Portfolio Website
+# MH Creative Studio — Premium Portfolio Website
 
 A production-ready, single-page portfolio site built with plain **HTML, CSS,
 and JavaScript** — no framework, no build step. Open `index.html` and it
@@ -13,7 +13,7 @@ static host.
 
 For the smoothest local experience (so relative image paths always behave
 identically to production), you can optionally serve it with any static
-server, e.g. `npx serve .` or the VS Code "Live Server" extension — but it is
+server, e.g. the VS Code "Live Server" extension — but it is
 not required.
 
 ## Adding your photo and portfolio images
@@ -27,7 +27,7 @@ single source of truth:
 
 - Drop your profile photo in `assets/profile/` and add its filename to
   `PROFILE_IMAGES`. The hero section picks it up automatically (first entry
-  wins). Until you add one, an elegant animated "RH" monogram is shown
+  wins). Until you add one, an elegant animated "MH" monogram is shown
   instead — the site never looks broken or half-finished.
 - Drop portfolio images into the matching folder (`assets/logos/`,
   `assets/branding/`, `assets/medical/`, etc.) and add one entry to
@@ -75,22 +75,17 @@ portfolio/
   Contact form + social links + map placeholder
 - Dark/light theme toggle (persisted), cursor glow, magnetic buttons, back-to-top,
   floating WhatsApp CTA, scroll progress bar
-- SEO: meta description, keywords, Open Graph, Twitter Card, JSON-LD Person
+- SEO: meta description, keywords, Open Graph, Twitter Card, JSON-LD Organization
   schema, `sitemap.xml`, `robots.txt`
 - Fully responsive from 320px to 1920px+
 - Respects `prefers-reduced-motion` and keeps visible keyboard focus states
 
-## Contact form
-
-The form validates fields client-side and opens the visitor's email client
-with the message pre-filled (`mailto:`), since there is no backend in a
-static project. If you want real form submissions without building a
-backend, wire the `<form id="contactForm">` in `index.html` up to a service
-like Formspree, Web3Forms, or Netlify Forms — each just needs an `action`
-URL, no code changes here.
-
-## Customizing colors & fonts
-
-All design tokens live at the top of `css/style.css` inside `:root` —
-change `--primary`, `--secondary`, `--accent`, `--bg`, etc. in one place and
-the whole site updates.
+## Contact
+MH Creative Studio — Md. Akash (মোঃ আকাশ)
+Website: https://mhcreativestudio.pro.bd/
+Email: mhcreativestudiohub@gmail.com
+Phone: +8801580804835
+Facebook: https://www.facebook.com/mh.creative.studio24
+Instagram: https://www.instagram.com/mh.creative.studio24
+GitHub: https://github.com/aiventrahub
+Telegram: https://t.me/aiventrahub_official
